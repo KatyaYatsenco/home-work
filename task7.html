@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my own greed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .row {
+            margin: 0;
+            display: table;
+            padding: 0;
+            width: 100%;
+        }
+        .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: inline-block;
+
+        }
+        .col-1 {
+            width: 12.5%;
+        }
+        .col-2 {
+            width: 25%;
+        }
+        .col-3 {
+            width: 37.5%;
+        }
+        .col-4 {
+            width: 50%;
+        }
+        .col-5 {
+            width: 62.5%;
+        }
+        .col-6 {
+            width: 75%;
+        }
+        .col-7 {
+            width: 87.5%;
+        }
+        .col-8 {
+            width: 100%;
+        }
+        .red {
+            background-color: #ff776d;
+        }
+        .blue {
+            background-color: #befaff;
+        }
+        .green {
+            background-color: #83ce76;
+        }
+        .yellow {
+            background-color: #ffff99;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        .padding-20 {
+            padding: 20px;
+        }
+
+        .col-2-fix-r {
+            width: 300px;
+            padding: 0;
+            text-align: center;
+            display: inline-block;
+        }
+        .col-2-fix-l {
+            width: 300px;
+            padding: 0;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+        .col-4-100 {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+            display: inline-block;
+            margin-right: -300px;
+            margin-left: -300px;
+        }
+        h3 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h3>I created my  own the grid system, which consists of 8 columns.</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <div class="yellow">2</div>
+            </div>
+            <div class="col-4">
+                <div class="blue">4</div>
+            </div>
+            <div class="col-2">
+                <div class="red">2</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="green">4</div>
+            </div>
+            <div class="col-4">
+                <div class="yellow">4</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <div class="blue">2</div>
+            </div>
+            <div class="col-6">
+                <div class="red">6</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="green">6</div>
+            </div>
+            <div class="col-2">
+                <div class="yellow">4</div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>I offset each column on 20px.</h3>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-4 padding-20">
+                <div class="green">4</div>
+            </div>
+            <div class="col-4 padding-20">
+                <div class="yellow">4</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 padding-20">
+                <div class="blue">2</div>
+            </div>
+            <div class="col-6 padding-20">
+                <div class="red">6</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 padding-20">
+                <div class="green">6</div>
+            </div>
+            <div class="col-2 padding-20">
+                <div class="yellow">4</div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>I limited 1 and 3 columns by 300px. And second column is stretched.</h3>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-2-fix-l">
+                <div class="yellow">2</div>
+            </div>
+            <div class="col-4-100 ">
+                <div class="blue">4</div>
+            </div>
+            <div class="col-2-fix-r ">
+                <div class="red">2</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+<!--
+1.белые ячейки с цифрами;
+2. цветные с отступами 20px;
+3. цветные с отступами 30px;
+4.отступы по краям экрана для 2 и 3 по 30px;
+5. фиксированная ширина страницы 1000px;
+6. без отступов с разными цветами;
+-->
